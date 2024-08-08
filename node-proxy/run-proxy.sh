@@ -1,2 +1,2 @@
-npm install http-proxy
-node proxy.js
+npm install
+npm run start
