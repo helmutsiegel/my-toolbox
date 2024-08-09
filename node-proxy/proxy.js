@@ -26,6 +26,7 @@ const server = http.createServer((req, res) => {
   proxy.web(req, res, {
     target: 'http://example.com', // Target server URL
     changeOrigin: true,
+    secure: false // not recommended in production
   });
 });
 
