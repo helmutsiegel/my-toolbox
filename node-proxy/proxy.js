@@ -22,6 +22,12 @@ const server = http.createServer((req, res) => {
       headers: proxyReq.getHeaders(),
     });
   });
+
+  proxy.on('proxyRes', (proxyRes, req, res) => {
+    console.log('Response from target server:');
+    console.log('Status:', proxyRes.statusCode);
+    console.log('Headers:', proxyRes.headers);
+  });
   
   proxy.web(req, res, {
     target: 'http://example.com', // Target server URL
