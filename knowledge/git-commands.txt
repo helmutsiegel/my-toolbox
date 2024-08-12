@@ -1,0 +1,4 @@
+// Stash your changes, pull, then apply
+git stash
+git pull
+git stash apply --index
