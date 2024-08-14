@@ -12,7 +12,7 @@ source apppen-aliases-to-bashrc.sh
 
 ```shell
 
-wget https://raw.githubusercontent.com/helmutsiegel/my-toolbox/main/aliases.sh
+wget https://raw.githubusercontent.com/helmutsiegel/my-toolbox/main/aliases/aliases.sh
 
 cat aliases.sh >> ~/.bashrc
 
