@@ -3,6 +3,7 @@
     "http-proxy": "^1.18.1"
   },
   "scripts": {
-    "start": "node proxy.js"
+    "start": "node proxy.js",
+    "format": "prettier --write"
   }
 }
