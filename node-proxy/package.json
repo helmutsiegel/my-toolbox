@@ -1,9 +1,13 @@
 {
   "dependencies": {
-    "http-proxy": "^1.18.1"
+    "http-proxy": "^1.18.1",
+    "node-windows": "1.0.0-beta.8"
+  },
+  "devDependencies": {
+    "prettier": "^3.3.3"
   },
   "scripts": {
     "start": "node proxy.js",
-    "format": "prettier --write"
+    "format": "prettier --write ."
   }
 }

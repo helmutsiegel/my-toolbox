@@ -1,2 +1,2 @@
-/node-proxy/node-modules/*
+/node-proxy/node_modules/
 /node-proxy/pnpm-lock.yaml
