@@ -24,7 +24,7 @@ git config [config name] [value]
 git config --unset [config name]
 ```
 
-- Use rebase for iverging commit
+- Use rebase for diverging commit
 ```shell
 git config pull.rebase true
 ```
