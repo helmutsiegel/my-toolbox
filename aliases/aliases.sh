@@ -9,5 +9,6 @@ alias status="git status"
 alias commit="git add . && git commit -m"
 alias idea="/opt/idea-*/bin/./idea"
 alias resetidea="rm -r ~/.java/.userPrefs/"
+alias executable="chmod +x"
 
 # Helmut Tool-Box aliases END"
