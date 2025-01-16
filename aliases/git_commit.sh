@@ -15,6 +15,16 @@ fi
 # Read commit messages from file into an array
 mapfile -t commit_messages < "$commit_file"
 
+# Check for -a argument
+amend_flag=""
+if [[ "$1" == "-a" ]]; then
+    amend_flag="--amend"
+    
+    echo -e "\n--------------------------"
+    echo "!! Amending last commit !!"
+    echo -e "--------------------------\n"
+fi
+
 # Function to display the menu
 display_menu() {
     echo "Select a commit message:"
@@ -29,6 +39,7 @@ display_menu() {
 display_menu
 
 # Get user's choice
+echo
 read -p "Enter your choice (1-$((${#commit_messages[@]}+2))) or '1' for custom message: " choice
 
 # Validate user input
@@ -58,4 +69,12 @@ fi
 
 # Perform the git commit
 git add .
-git commit -m "$commit_message"
+git commit $amend_flag -m "$commit_message"
+
+echo
+if [ -z "$amend_flag" ]; then
+    echo "Commit with: $commit_message"
+else
+    echo "Commit AMENDED with: $commit_message"
+fi
+echo
